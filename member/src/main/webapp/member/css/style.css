@@ -1,0 +1,18 @@
+@charset "utf-8";
+	#wrap {
+		text-align: center;
+	}
+	table {
+		width: 530px;
+		border: 3px solid purple;
+		text-align: left;
+		margin:0 auto;
+	}
+	td {
+		border: 1px solid purple;
+	}
+	#title {
+		background-color: pink;
+		text-align: center;
+	}
+	input[type="radio"] {margin-left: 10px;}

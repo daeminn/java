@@ -1,0 +1,361 @@
+#osc-main {
+   position: relative;
+   width: 100%;
+}
+.section {
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+
+/* 섹션별 타이틀 글자크기 */
+.intro-title, .biz-wrap h2, .news-title-wrap h2, .emp-title {font-size: 3em;}
+
+
+/* sec00 */
+
+.sec00 {
+   background: url('../images/main1A.jpg') center center / cover;
+   color: #fff;
+}
+.intro-wrap {
+   margin: 0 5%;
+   opacity: 1;
+}
+.intro-title-wrap {
+   padding: 5%;
+   background:rgba(0,0,0,0.6);
+}
+
+.intro-title {
+   display: block;
+   padding-bottom: 10px;
+   z-index: 1;
+   cursor: pointer;
+}
+
+
+.intro-title2 {
+   padding-top: 40px;
+}
+.intro-text {
+   word-break: keep-all;
+}
+
+.more {
+   display: inline-block;
+   padding: 20px;
+   margin-top: 20px;
+   background:#0a58ca;
+   color: #fff;
+   transition: 0.3s;
+}
+.more:hover {
+   border-radius: 40px 0 40px;
+}
+
+
+/* sec01 */
+
+.sec01 {   
+   position: relative;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.biz-wrap {
+   display: table;
+   width: 100%;
+   height: 100%;
+}
+.biz-wrap > div {
+   position: relative;
+   display: block;
+   top: 0;
+   width: 100%;
+   padding: 30px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   transition:ease-in-out 0.3s;
+   z-index: 1;
+}
+.biz-wrap > .develop {
+   height: calc((100% - 60px) / 2 + 60px);
+   padding-top: 60px;
+}
+.biz-wrap > .business {
+   height: calc((100% - 60px) / 2);
+   vertical-align: bottom;
+}
+
+.biz-wrap > div:after {
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   content: '';
+   background: rgba(0,0,0,0.5);
+   z-index: -1;
+   opacity: 0.5;
+   transition: 0.5s;
+}
+.develop {
+   left: 0; 
+   background-image: url('../images/main2A.jpg');
+}
+.business {
+   right: 0;
+   background-image: url('../images/main2B.jpg');
+}
+
+.biz-wrap > div:hover:after{background-color: rgba(0,0,0,1);}
+.develop:hover .dev-list,
+.business:hover .bsn-list {
+   opacity: 1;
+}
+.biz-wrap h3 {
+   font-size: 3em;
+   color: #fff;
+}
+.dev-list, .bsn-list {
+   width: 300px;
+   color: #fff;
+   font-size: 1.2em;
+   line-height: 2.5;
+   opacity: 0.3;
+}
+.dev-list {
+   margin-top: 30px;
+}
+.dev-list>li:after, .bsn-list-title:after, .bsn-list>li>a:after, .bsn-list ul a::after {
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 1px;
+   content: '';
+   background: #fff;
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: 0.3s;
+}
+.dev-list>li:hover:after, .bsn-list>li>a:hover:after, .bsn-list ul a:hover:after {transform: scaleX(1);}
+.dev-list>li a, .bsn-list>li>a, .bsn-list ul a {transition: 0.3s;}
+.dev-list>li a:hover, .bsn-list>li>a:hover, .bsn-list ul a:hover {color: #fff;}
+
+.dev-list {
+   bottom: 15%;
+   left: 50px;
+}
+.bsn-list {
+   top: 12%;
+   right: 50px;
+}
+.dev-list, .bsn-list {
+   opacity: 0.3;
+   transition: 0.3s;
+}
+.dev-list li {
+   position: relative;
+}
+.dev-list a, .bsn-list ul a  {
+   display: block;
+   width: 100%;
+   height: 100%;
+   border-bottom: 1px solid rgba(255,255,255,0.5);
+   color: #eee;
+}
+.bsn-list li {
+   position: relative;
+}
+.bsn-list-title {
+   color: #dedede;
+   margin-top: 30px;
+}
+
+/* sec02 */
+.sec02 {}
+.news-wrap {
+
+}
+
+.news-title-wrap {
+   width: 400px;
+   height: 250px;
+}
+.news-title-wrap h2 {
+   height: 1.5em;
+   display: inline-block;
+}
+.news-title-wrap p {
+   font-size: 1.3em;
+   font-weight: 500;
+}
+.news-box {
+   width: 65%;
+   transition: 0.4s;
+}
+
+.news-li {
+   position: relative;
+   float: left;
+   width: 32%;
+   padding: 20px;
+   outline: 1px solid rgba(0,0,0,0.3);
+   backdrop-filter: blur(5px);
+   background: rgba(255,255,255,0);
+   transition: 0.3s;
+
+}
+.news-li:after {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   transform: scale(0,1);
+   transform-origin: bottom;
+   transition: 0.5s;
+   content: '';
+   z-index: -1;
+}
+.news-li:hover::after {
+   transform: scale(1);
+   background: rgb(10, 88, 202,1);
+}
+.news-li:hover { color: #fff;}
+.news-li-tit {
+   display: -webkit-box;
+   width: 100%;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   font-size: 1.5em;
+   font-weight: 500;
+   overflow: hidden;
+}
+.news-txt {
+   display: -webkit-box;
+   width: 100%;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   margin: 10px 0;
+}
+.news-date {
+   font-size: 0.9em;
+   opacity: 1;
+   transition: 0.1s;
+   overflow: hidden;
+}
+
+/* sec03 */
+
+.sec03 {
+   background-image: url('../images/main4.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.emp-wrap {
+   margin: 0 5%;
+   max-width: 900px;
+   background:rgba(0,0,0,0.4);
+   padding: 50px;
+   padding-bottom: 70px;
+   z-index: 1;
+}
+.emp-title, .emp-text {
+   color: #fff;
+}
+.emp-text {
+   margin: 20px auto 0;
+}
+
+@keyframes show {
+   from { opacity: 0;}
+   to { opacity: 1;}
+}
+/* #osc-main.fp-viewing-3 .emp-wrap {
+   animation: show 0.3s 0.3s both;
+   overflow: hidden;
+} */
+
+.fp-tableCell {
+   padding-top: 60px;
+}
+.sec01 .fp-tableCell, .sec04 .fp-tableCell {
+   padding-top: 0;
+}
+/* 풀페이지 네비게이션 */
+#fp-nav {z-index: 0;}
+#fp-nav li:last-child {
+   display: none;
+}
+#fp-nav ul li {margin: 0; height: 50px;}
+#fp-nav ul li a span {
+   background-color: #fff;
+   width: 5px; height: 5px;
+   transition: 0.3s;
+   border: 1px solid #fff;
+}
+#fp-nav ul li .fp-tooltip {top: 14px; font-size: 15px; font-family: 'Roboto', 'Noto Sans KR', 'Malgun Gothic', 'Dotum', sans-serif;}
+.fp-viewing-media #fp-nav ul li a span,
+.fp-viewing-media #fp-nav ul li a::before,
+.fp-viewing-media #fp-nav ul li a::after,
+.fp-viewing-incruit #fp-nav ul li a span,
+.fp-viewing-incruit #fp-nav ul li a::before,
+.fp-viewing-incruit #fp-nav ul li a::after {
+   background-color: rgba(0,0,0,0.7);
+}
+#fp-nav ul li:first-child a::before,
+#fp-nav ul li:nth-last-child(2) a:after {display: none;}
+.fp-viewing-media #fp-nav ul li .fp-tooltip,
+.fp-viewing-incruit #fp-nav ul li .fp-tooltip {
+   color: rgba(0,0,0,0.7);
+}
+#fp-nav.fp-right {right:35px; transition: 0.5s;}
+#osc-main.fp-viewing-ft #fp-nav { display: none;}
+
+/* 네비디자인 */
+
+#fp-nav ul li a:before {
+   position: absolute;
+   left: 6.5px;
+   top: 0;
+   width: 1px;
+   height: 50%;
+   background-color: #fff;
+   transition: height 0.4s;
+   content: "";
+}
+#fp-nav ul li a::after {
+   content: "";
+   width: 1px;
+   height: 50%;
+   background-color: #fff;
+   position: absolute;
+   left: 6.5px;
+   top: 50%;
+   transition: height 0.4s;
+}
+
+#osc-main.fp-viewing-media #fp-nav ul li a span, 
+#osc-main.fp-viewing-3 #fp-nav ul li a span {border-color: #000;}
+#osc-main.fp-viewing-2 #fp-nav ul li a.active span, #osc-main.fp-viewing-2 #fp-nav ul li:hover a.active span {border:1px solid #000; background: #fff;}
+#osc-main.fp-viewing-3 #fp-nav ul li a.active span, #osc-main.fp-viewing-3 #fp-nav ul li:hover a.active span {border:1px solid #000; background: #fff;}
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span {background-color: #000; transform: scale(1.2);}
+
+/* 구글아이콘 */
+.dev-list .material-symbols-outlined,
+.bsn-list .material-symbols-outlined {
+   position: absolute;
+   left: 93%;
+   top: 0.65em;
+}

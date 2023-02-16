@@ -1,0 +1,129 @@
+/* container  */
+#container {
+    margin: 50px 0;
+}
+.loginBox {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 50px 100px;
+    border-radius: 15px;
+}
+h1 {
+    text-align: center;
+    color: var(--textColor);
+}
+.box1, .box2 {
+    width: 438px;
+    padding: 15px 0 15px 10px;
+    margin-bottom: 5%;
+}
+.box1, .box2, .box3 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.box3 {
+    background-color: #EBF6FF;
+    font-size: 0.9em;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+.box3>.checkBox {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.box3>p {
+    float: right;
+    padding-right: 5px;
+}
+.box3>p>a:hover {
+    color: var(--textColor);
+    font-weight: 500;
+}
+.box3>.box3_text2 {
+    border-right: 1px solid #ccc;
+}
+.box3>.box3_text1 {
+    margin-left: 5px;
+}
+.text2 {
+    text-align: center;
+    padding-top: 5%;
+    font-weight: 500;
+}
+.box4 {
+    max-width: 500px;
+    display: flex;
+}
+.box4>li {
+    width: calc(100% / 4);
+    padding: 20px 5px;
+    text-align: center;
+}
+.box4 li a img {
+    width: 65%;
+    transition: .5s;
+}
+.box4 li a img:hover {
+    transform: scale(1.1);
+    opacity: .7;
+}
+.loginButton, .signUpButton {
+    text-align: center;
+    max-width: 500px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.loginButton {
+    background-color: var(--mainColor);
+    padding: 10px 0;
+    margin-top: 3%;
+}
+.loginButton>input {
+    color: #fff;
+    background-color: var(--mainColor);
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+.signUpButton {
+    background-color: #fff;
+    margin-top: 5%;
+    padding: 12px 0;
+}
+.signUpButton>a {
+    color: var(--textSub);
+}
+.signUpButton>a {
+    font-size: 20px;
+    font-weight: 500;
+}
+.loginButton:hover, .signUpButton:hover {
+    opacity: .8;
+}
+footer {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 1023px) {
+    .box1, .box2 {
+        display: block;
+    }
+    .box1, .box2 {
+        width: calc(100% - 12px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .loginBox {
+        padding: 10%;
+    }
+    #container {
+        overflow: hidden;
+    }
+}
+@media screen and (max-width: 480px) {
+    .loginButton {
+        padding: 8px 0;
+    }
+}

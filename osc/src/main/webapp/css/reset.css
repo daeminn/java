@@ -1,0 +1,114 @@
+@charset 'UTF-8';
+@import url('fonts.css');
+/* 1. 초기화 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:before,
+:after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+header, main, footer, nav, section, article, aside {
+    display: block;
+}
+
+/* 2. 요소별 설정 */
+body {
+    font-family: 'Roboto', 'Noto Sans KR', 'Malgun Gothic', 'Dotum', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+body.hidden {
+    overflow: hidden;
+}
+h1, h2, h3, h4, h5, h6, input, select, textarea {
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+}
+input, select, textarea {
+    font-size: 1em;
+}
+ul, ol {
+    list-style-type: none;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+}
+input, button, textarea, select {
+    font-size: 1em;
+    font-family: 'Roboto', 'Noto Sans KR', 'Malgun Gothic', 'Dotum', sans-serif;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+label, button {
+    cursor: pointer;
+}
+button {
+    border: 0;
+    background-color: transparent;
+}
+p {
+    margin: 1em 0;
+}
+
+/* 3. 공용클래스 설정 */
+.wrapper {
+    max-width: 1680px;
+    margin: auto;
+}
+.wrapper-s {
+    max-width: 1400px;
+    margin: auto;
+}
+.wrapper-s {
+    max-width: 1200px;
+    margin: auto;
+}
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.blind, .sound-only {
+    position: absolute;
+    left: -9999em;
+}
+.table {
+    display: table;
+    width: 100%;
+}
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.relative {
+    position: relative;
+}
+.center {
+    text-align: center;
+}
+.auto {
+    margin: auto;
+}
+.pd0 {
+    padding: 0 !important;
+}
+
+/* 마진 */
+.m1 {margin: 1em auto;}
+.m2 {margin: 2em auto;}
+.m3 {margin: 3em auto;}
+.m4 {margin: 4em auto;}
+.m5 {margin: 5em auto;}

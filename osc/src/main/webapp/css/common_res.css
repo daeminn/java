@@ -1,0 +1,376 @@
+@charset 'UTF-8';
+/* 모바일만 ~767px */
+@media screen and (max-width: 767px) {
+   .hd-wrap {
+      display: flex;
+      align-items: center;      
+      height: 60px;
+   }
+   .ft-logo {
+      width: 210px;
+   }
+   .ft-logo, .ft-info {
+      margin-bottom: 20px;
+   }
+   .sub-copyright {font-size: 14px;}
+}
+
+/* 태블릿부터 768px~ */
+@media screen and (min-width: 768px) {
+   .ft-wrap {
+      display: flex;
+      flex-direction: column;
+   }
+   .ft-info-wrap {
+      display: flex;
+      justify-content: space-evenly;
+   }
+   .ft-info {}
+   .info-block {padding: 0;}
+}
+
+/* 태블릿만 768px~1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+   .hd-wrap {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      height: 60px;
+   }
+   .profile h2:after {width: 70px;}
+   .profile div {font-size:1.5em;}
+   #osc-gnb {
+      position: relative;
+      width: 100%;
+   }
+
+   .customer-info {margin-right: 50px;}
+}
+
+/* PC부터 1024px~ */
+
+@media screen and (min-width: 1024px) {
+   .profile, .gnb-open, .gnb-close {
+      display: none;
+   }
+
+   /* 헤더 */
+
+   #osc-hd {
+      backdrop-filter: blur(10px);
+      background: transparent;
+      transition: 0.3s;
+      height: 100px;
+   }
+   .hd-wrap {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      transition: 0.3s;
+   }
+   .osc-logo {
+      left: 8%;
+      z-index: 1;
+   }
+   .gnb-wrap{
+      top: 0;
+      display: flex;    
+      background: transparent;   
+      overflow: initial;
+      transition: 0.3s;
+   }
+   #osc-gnb {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+      padding-left: 15%;
+      outline: 1px solid rgba(0, 0, 0, 0.1);
+   }
+   .osc-logo a {
+      background-image: url('../images/logo_wh.png');
+   }
+   .depth1 {
+      position: absolute;
+      top: 0;
+      display: flex;
+      width: 85%;
+      height: 100px;
+      line-height: 6;
+   }
+   .depth1>li:after {
+      position: absolute;
+      top: 99px;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 3px;
+      background: #fff;
+      transition: 0.3s;
+      transform: scaleX(0);
+      transform-origin: center center;
+   }
+   .depth1>li:hover:after {
+      transform: scaleX(0.75);
+   }
+   .depth1 > li {
+      position: relative;
+      width: 70%;
+   }
+
+   .depth1 > li > a {
+      height: 100%;
+      font-size: 1em;
+      font-weight: 500;
+      line-height: 7;
+   }
+   .depth2 {
+      display: block;
+      background-color: inherit;
+   }
+   .depth2 a {
+      font-size: 0.9em;
+      line-height: 0;
+      opacity: 0;
+      color: rgba(255,255,255,0.8);
+      overflow: hidden;
+      transition: 0.3s;
+   }
+   .depth2 a:hover { padding-left: 5px; color: #fff; font-weight: 600;}
+
+   #osc-hd:hover .all-menu-open:hover{
+      color: #f00;
+   }
+   #osc-hd.active .gnb-wrap {
+      height: 500px;
+      background-color: #000;
+   }
+   #osc-hd.active #osc-gnb {
+      outline: 1px solid rgba(255,255,255,0.5);
+   }
+   #osc-hd.active .depth2 a{
+      line-height: 3.5;
+      opacity: 1;
+   }
+   
+}
+
+/* 작은 PC 1024px~1279px */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+}
+
+/* PC 1280px~ */
+@media screen and (min-width: 1280px) {
+   .attr-nav {   
+      display: block;
+      right: 0;      
+      top: 0;
+      width: 15%;
+      height: 100%;
+   }
+  .all-menu-open > .material-symbols-outlined {
+      font-size: 35px;
+  }
+   .all-menu-open, .all-menu-close {
+      position: absolute;
+      top: 35px;
+      right: 50%;
+      display: block;
+      color: #fff;
+      height: 35px;
+   }
+   .all-menu-close-wrap {
+      position: absolute;
+      width: 15%;
+      height: 100px;
+      top: 0;
+      right: 0;
+   }
+   .all-menu-close {
+      width: 35px;
+      height: 35px;
+      background: url('../images/mobile/xmark-solid.svg') center center no-repeat;
+      transition: 0.5s;
+      display: none;
+      opacity: 0;
+   }
+   .all-menu-close:hover {
+      background-image: url('../images/mobile/xmark-solid\ copy.svg');
+   }
+   #all-menu{
+      position: fixed;
+      top: 0;
+      right: -100%;
+      display: block;
+      width: 100vw;
+      z-index: 9999;
+      transition: 0.5s;
+      background: url('../images/oscotec.png') 100% / cover no-repeat;
+      opacity: 0;
+      overflow: auto;
+   }
+   #all-menu.slide {
+      right: 0;
+      opacity: 1;
+   }
+   #all-menu.slide .all-gnb {
+      backdrop-filter: brightness(0.3) blur(3px);
+   }
+   #all-menu.slide .all-menu-close {
+      display: block;
+      opacity: 1;
+   }
+ 
+   .all-gnb {
+      height: 100vh;
+      transition:1.5s;
+   }
+   .all-menu-title {
+      position: absolute;
+      left: 50%;
+      top: 5%;
+      width: 300px;
+      height: 100px;
+      background: url(../images/logo_wh.png) center center / contain no-repeat;
+      transform: translateX(-50%);
+   }
+   .dp1 {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+   .dp1>li {
+      display: flex;
+      align-items: center;
+      width:100%;
+      line-height: 3.3;
+      border-bottom: 1px solid;
+   }
+   .dp1>li:first-child {
+      border-top: 1px solid;
+   }
+   .dp1>li>a {
+      display: block;
+      width: 20%;
+      text-align: center;
+      font-size: 1.5em;
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+   }
+   .dp1>li, .dp1>li:first-child {
+      border-color: rgba(255, 255, 255, 0.3);
+   }
+   .dp1 a {
+      color:#fff;
+   }
+   .dp2 {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      line-height: 5;
+      font-size: 1em;
+      font-weight: 300;
+   }
+   .dp2>li{
+      display: flex;
+      justify-content: start;
+      width: 15%;
+      transition: 0.2s;
+   }
+   .dp2 a {
+      position: relative;
+      display: flex;
+      justify-content: start;
+      padding-left: 20%;
+      width: 100%;
+      color: #fff;
+   }
+   .dp2 a::before{
+      position: absolute;
+      left: 0;
+      background-color: #282B2F;
+      display: block;
+      content: '';
+      width: 0;
+      height: 100%;
+      transition: 0.2s;
+      z-index: -1;
+   }
+   .dp2 a:hover:before{width: 100%;}
+
+   .gnb-wrap {top: 0; height: 100px;}
+
+   #osc-gnb {padding-left: 15%;}
+
+   .depth1 {width: 70%;}
+
+   .depth2 a {font-size: 1em;}   
+
+    /* 로그인폼, 모달 */
+    .modal {
+      position: fixed;
+      top: 0;
+      display: none;
+      width: 100%;
+      height: 100vh;
+      background-color: #000;
+      opacity: 0.5;
+      z-index: 2;
+   }
+   
+  .login-form {
+   position: fixed;
+   top: 0;
+   right: -30%;
+   display: block;
+   width: 30%;
+   height: 100vh;
+   background-color: #000;
+   transition: all .6s cubic-bezier(.77,0,.175,1);
+   z-index: 101;
+  }
+  .login {
+  	margin:0 auto;
+  }
+  .login-form.open {
+   right: 0;
+  }
+  .login-form > .profile {
+   display: block;
+  }
+  .login-form > form {text-align: center;}
+  .join-btn, .login-btn{background-color: #fff;}   
+  .login-form-open {
+   position: absolute;
+   top: 35px;
+   right: 25%;
+   display: block;
+   height: 35px;
+   color: #fff;
+}
+   .login-form-close {
+   position: absolute;
+   top: 35px;
+   left: 6%;
+   height: 35px;
+   color: #fff;
+   z-index: 11;
+   }
+   .form-control:focus::placeholder {color: transparent;}
+   .login-form-open .material-symbols-outlined,.login-form-close .material-symbols-outlined {font-size: 35px;}
+   .join-btn, .submit-btn, .signup-btn {color: #000;} 
+   .login-txt {margin-bottom: 15px; color: #fff;}
+   .signup-btn, .submit-btn, .logout, #updateBtn, #joinBtn{
+	padding: 5px 10px;
+    margin-top: 15px; 
+    color: #fff; 
+    background-color: #888; 
+    border-radius: 5px;
+    cursor:pointer;
+   }
+   .submit-btn {cursor: pointer;}
+}
